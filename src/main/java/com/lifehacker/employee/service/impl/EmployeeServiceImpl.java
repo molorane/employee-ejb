@@ -9,15 +9,13 @@ import jakarta.persistence.PersistenceContext;
 
 @Stateless
 public class EmployeeServiceImpl implements EmployeeService {
- 
-	@PersistenceContext(name = "EmployeeApp")
-	private EntityManager em;
- 
-	@Override
-	public void addEmployee(Employee emp) {
- 
-		em.persist(emp);
- 
-	}
- 
+
+    @PersistenceContext(name = "EmployeeApp")
+    private EntityManager em;
+
+    @Override
+    public void addEmployee(Employee emp) {
+        em.persist(emp);
+    }
+
 }
